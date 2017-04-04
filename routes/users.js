@@ -45,6 +45,7 @@ router.route("/:user_id")
         knex('users')
             .where("id", req.params.user_id)
             .then((user) => {
+                console.log(req.params.user_id);
                 console.log(user);
                 res.render("users/show", {
                     id: user[0].id,
@@ -68,7 +69,7 @@ router.route("/:user_id")
             .del()
             .then(() => {
                 res.redirect("/users");
-            })
-    })
+            });
+    });
 
 module.exports = router;

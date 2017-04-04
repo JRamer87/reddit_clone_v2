@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit Page</h1>
+	<form name="editpost"action="/posts/:post_id?_method=PUT" method="POST">
+    <label for="editpost">post Id:</label><br>
+		<input type="text" name="post[id]" autofocus required><br><br>
+		<label for="editpost">Title:</label><br>
+		<input type="text" name="post[title]" autofocus required><br><br>
+		<label for="editpost">Body:</label><br>
+		<input type="text" name="post[body]" required><br><br>
+		<input type="submit" value="Edit post">
+	</form>
+</body>
+</html>

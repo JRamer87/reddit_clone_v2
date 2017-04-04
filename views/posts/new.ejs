@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<h1>New post Page</h1>
+	<form name="newpost"action="/posts" method="POST">
+		<label for="newpost">Title:</label><br>
+		<input type="text" name="post[title]" autofocus required><br><br>
+		<label for="postName">Body:</label><br>
+		<input type="text" name="post[body]" required><br><br>
+		<label for="postName">User Id:</label><br>
+		<input type="text" name="post[user_id]" required><br><br>
+		<input type="submit" value="Create New post">
+	</form>
+</body>
+</html>

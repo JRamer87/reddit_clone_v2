@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit Page</h1>
+	<form name="editcomment"action="/comments/:comment_id?_method=PUT" method="POST">
+    <label for="editcomment">Comment Id:</label><br>
+		<input type="text" name="comment[id]" autofocus required><br><br>
+		<label for="editcomment">Body:</label><br>
+		<input type="text" name="comment[body]" autofocus required><br><br>
+		<input type="submit" value="Edit comment">
+	</form>
+</body>
+</html>

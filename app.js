@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/users');
+const postsRouter = require('./routes/posts');
+const commentsRouter = require('./routes/comments');
 
 app.set('view engine', 'ejs');
 //app.use(express.static(__dirname + '/public'));//What is this doing?
@@ -21,6 +23,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", usersRouter);
+app.use("/posts", postsRouter);
+app.use("/comments", commentsRouter);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Listening on port 3000");
