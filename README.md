@@ -3,13 +3,15 @@ Reddit Clone Assessment
 
 #### Steps to MVP
 
-1. Create & clone repo
+1. Create & clone repo (include .gitignore)
 2. NPM init -y
 3. Install
   * express
-  * KNEX
+  * KNEX - knex init, configure knexfile.js
   * body-parser
   * morgan
+  * ejs
+  * method-override
 
 4. Create database tables with relationships
 5. Create migrations

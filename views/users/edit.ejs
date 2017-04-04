@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit Page</h1>
+	<form name="editUser"action="/users/:user_id?_method=PUT" method="POST">
+    <label for="editUser">User Id:</label><br>
+		<input type="text" name="user[id]" autofocus required><br><br>
+		<label for="editUser">Full Name:</label><br>
+		<input type="text" name="user[full_name]" autofocus required><br><br>
+		<label for="editUser">Username:</label><br>
+		<input type="text" name="user[username]" required><br><br>
+		<input type="submit" value="Edit User">
+	</form>
+</body>
+</html>

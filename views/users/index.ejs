@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Results</h1>
+
+  <% users.forEach((user) => {  %>
+      <ul> Id: <%= user.id %> <br> </ul>
+      <ul> Full Name:  <%= user.full_name %><br> </ul>
+      <ul> Username:  <%= user.username %></ul>
+  <% }) %>
+
+</body>
+</html>
