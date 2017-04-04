@@ -5,8 +5,11 @@ const ejs = require('ejs');
 const express = require('express');
 //Gives you acess to express methods suchs as .get, .post, .put etc...
 const app = express();
+//Bringing in method override which will allow us to use HTTP methods not supported by the client(browser)
 const methodOverride = require('method-override');
+//Bringing in morgan which logs requests and routes as they hit the server
 const morgan = require('morgan');
+//Bringing in Body parser which parses incoming request bodies in a middleware before your handlers, available under the req.body property.
 const bodyParser = require('body-parser');
 const usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts');
@@ -14,13 +17,13 @@ const commentsRouter = require('./routes/comments');
 
 //Sets the view engine to ejs which looks in the views folder by default
 app.set('view engine', 'ejs');
-//Logs the type of request and route as it hits the server
+//Telling our app to use morgan
 app.use(morgan("tiny"));
-//Parses incoming request bodies in a middleware before your handlers, available under the req.body property.
+//Telling our app to use bodyParser
 app.use(bodyParser.urlencoded({
     extended: true //A new body object containing the parsed data is populated on the request object after the middleware (i.e. req.body). This object will contain key-value pairs, where the value can be a string or array (when extended is false), or any type (when extended is true).
 }));
-//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+//Telling our app to use method override
 app.use(methodOverride("_method"));
 //Renders the home page from the statics folder in views
 app.get("/", (req, res) => {
